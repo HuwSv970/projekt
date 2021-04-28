@@ -1,0 +1,21 @@
+.styleNavBLink{
+    background-color: black;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    padding:15px;
+    margin:2px;
+}
+#NavB{
+    text-align:center;
+}
+#content{
+    text-align:center;
+}
+button {
+background-color:black;
+
+}
