@@ -7,13 +7,15 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>My-Store</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     
 </head>
 
 <body>
+<img id="left" src="1.jpg" >
+<img id="right"src="2.jpg" >
 <?php
 if(isset($_POST["Username"],$_POST["Psw"])){
 
@@ -64,7 +66,7 @@ if($_SESSION["isUserLoggedIn"]){
 
     <h1>Logout Page</h1>
     <form method="POST">
-    <input type="submit" value="logout" name="logout">
+    <input type="submit" value="logout" name="logout" style =" padding:11px">
     </form>
 
     <?php
@@ -73,9 +75,9 @@ if($_SESSION["isUserLoggedIn"]){
 ?>
 <h1>Welcome! Please Login</h1>
 <form method="POST">
-    <label for="UserName">Please type your Username</label> <input name="Username">
-    <label for="UserName">Password</label> <input name="Psw" type="password">
-    <input type="submit" value="login">
+    <label for="UserName">Username:</label> <input style ="margin:2px; padding:5px;" name="Username"><br>
+    <label for="UserName">Password:</label> <input style ="margin:2px; padding:5px;margin-left:3px" name="Psw" type="password"><br>
+    <input type="submit" value="login" style ="padding:10px; margin-left:195px;">
 </form>
 <?php
 
