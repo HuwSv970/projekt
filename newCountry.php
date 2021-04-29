@@ -17,7 +17,12 @@
 include_once("Nav-bar.php");
 ?>
 
-<div id="content">
+<div id="content"> 
+    <h1>Current Existing countries in our database</h1>
+     <form method="POST">
+        Type the name of the new country:<input name="NewCountry">
+        <input type="submit" value="Add">
+    </form>
     <?php
     if($_SESSION["isUserLoggedIn"])
     {
@@ -36,17 +41,16 @@ include_once("Nav-bar.php");
     }
     ?>
 
-    <form method="POST">
-        Type the name of the new country:<input name="NewCountry">
-        <input type="submit" value="Add">
-    </form>
+    
     
 
-    <h1>Current Existing countries in our database</h1>
+   
+   
+    <div id="countryDiv">
     <table>
-        <th>
-            <td>Country name:</td>
-        </th>
+        <tr>
+            <th>Country Name</th>
+        </tr></br>
 
         <?php
         $sqlSelect = $connection->prepare("SELECT CountryName from Countries");
@@ -67,7 +71,7 @@ include_once("Nav-bar.php");
         ?>
     </table>
 
-       
+  </div>     
 </div>
 </body>
 </html>
