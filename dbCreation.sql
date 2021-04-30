@@ -22,13 +22,14 @@ CREATE TABLE PPL (
     foreign key (ID_COUNTRY) references Countries(ID_COUNTRY)
 );
 
-Create table Prouducs (
+Create table Product (
     ID_Prouduct int NOT NULL AUTO_INCREMENT,
     PName varchar(50),
-    Price varchar(50),
+    Price decimal(5,2),
     ItemsNumber int(5),
     primary key (ID_Prouduct)
 );
 
 
 Insert into Countries (CountryName) values ("Luxembourg");
+

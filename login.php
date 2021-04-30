@@ -14,8 +14,15 @@
 </head>
 
 <body>
+</br>
 <img id="left" src="1.jpg" >
 <img id="right"src="2.jpg" >
+
+<div id="content">
+<?php
+include_once("Nav-bar.php");
+?>
+</br>
 <?php
 if(isset($_POST["Username"],$_POST["Psw"])){
 
@@ -31,7 +38,7 @@ if(isset($_POST["Username"],$_POST["Psw"])){
     }
     
     $result = $sql->get_result();
-    
+
     if($result->num_rows==0){
     
         print "Your username is not in our database";
@@ -41,11 +48,13 @@ if(isset($_POST["Username"],$_POST["Psw"])){
         $row = $result->fetch_assoc();
     
         if(password_verify($_POST["Psw"],$row["Psw"])){
-            print "You typed the correcy password. You are now logged in";
+            print "You typed the correct password. You are now logged in!";
             $_SESSION["isUserLoggedIn"] = true;
+            $_SESSION["curentUser"]=$_POST["Username"];
+            header("Location: login.php");
             
         } else {
-            print "Wrong password";
+            print "Wrong password!";
         }
     }
 }
@@ -55,9 +64,7 @@ if(isset($_POST["logout"])){
     session_destroy();
     $_SESSION["isUserLoggedIn"] = false;
 }
-include_once("Nav-bar.php");
 ?>
-<div id="content">
 <?php
 
 
@@ -66,19 +73,51 @@ if($_SESSION["isUserLoggedIn"]){
 
     <h1>Logout Page</h1>
     <form method="POST">
-    <input type="submit" value="logout" name="logout" style =" padding:11px">
+    <input type="submit" value="Logout" name="logout" style =" padding:11px">
     </form>
+    
+<?php
+    $sqlSelect = $connection->prepare("SELECT * from Product");
+        $selectionWentOK = $sqlSelect->execute();
+
+        if($selectionWentOK){
+
+            $result = $sqlSelect->get_result();
+            while($row=$result->fetch_assoc()){
+?>
+
+            <table id="tablelogin">
+    <tr>
+        <th id="itemTable">Name of the Product</th>
+        <th id="itemTable">Price</th> 
+        <th id="itemTable">In stock</th>
+    </tr> 
+                <td id="itemTable"><?=$row["PName"]?></td>
+                <td id="itemTable"><?=$row["Price"]?>€</td>
+                <td id="itemTable"><?=$row["ItemsNumber"]?></td>
+            </tr>
+                <?php
+            }
+
+        } else {
+            print "Something went wrong when selecting data";
+        }
+        ?>
+        </table>
+    
 
     <?php
 } else {
 
 ?>
 <h1>Welcome! Please Login</h1>
+<h2>
 <form method="POST">
     <label for="UserName">Username:</label> <input style ="margin:2px; padding:5px;" name="Username"><br>
-    <label for="UserName">Password:</label> <input style ="margin:2px; padding:5px;margin-left:3px" name="Psw" type="password"><br>
-    <input type="submit" value="login" style ="padding:10px; margin-left:195px;">
+    <label for="UserName">Password:</label> <input style ="margin:2px; padding:5px;margin-left:9px" name="Psw" type="password"><br>
+    <input type="submit" value="login" style ="padding:10px; margin-left:250px;">
 </form>
+
 <?php
 
 }

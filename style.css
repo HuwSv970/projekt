@@ -14,9 +14,16 @@ body{
 }
 #NavB{
     text-align:center;
+
 }
 #content{
     text-align:center;
+    height: 1300px;
+    width: 1000px;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: rgb(122, 241, 241);
+    
 }
 button {
 background-color:black;
@@ -30,6 +37,7 @@ table {
     width:670px;
     top: 11px;
     left: 11px;
+    z-index: -1;
     }
 #right{
     position: absolute;
@@ -37,4 +45,16 @@ table {
     width:670px;
     top: 11px;
     right: 11px;
+    z-index: -1;
+    
     }
+#itemTable{
+    padding:10px;
+    font-size:20px;
+    border-collapse: collapse;
+}
+#tablelogin{
+    margin-left: auto; 
+  margin-right: auto;
+  border-bottom: 1px solid black;
+}

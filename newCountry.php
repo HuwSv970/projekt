@@ -13,17 +13,19 @@
 </head>
 
 <body>
+</br>
 <img id="left" src="1.jpg" >
 <img id="right"src="2.jpg" >
+
+
+<div id="content"> 
 <?php
 include_once("Nav-bar.php");
 ?>
-
-<div id="content"> 
     <h1>Current Existing countries in our database</h1>
      <form method="POST">
-        Type the name of the new country:<input name="NewCountry">
-        <input type="submit" value="Add">
+        <h2>Type the name of the new country:</h2><input name="NewCountry" style ="padding:10px;">
+        <input type="submit" value="Add"style ="padding:10px;">
     </form>
     <?php
     if($_SESSION["isUserLoggedIn"])
@@ -43,15 +45,10 @@ include_once("Nav-bar.php");
     }
     ?>
 
-    
-    
-
-   
-   
     <div id="countryDiv">
-    <table>
+    <table id="tablelogin">
         <tr>
-            <th>Country Name</th>
+            <th id="itemTable">Country Name</th>
         </tr></br>
 
         <?php
@@ -63,7 +60,7 @@ include_once("Nav-bar.php");
             $result = $sqlSelect->get_result();
             while($row=$result->fetch_assoc()){
                 ?>
-                <tr><td><?=$row["CountryName"]?></td></tr>
+                <tr><td id="itemTable"><?=$row["CountryName"]?></td></tr>
                 <?php
             }
 
