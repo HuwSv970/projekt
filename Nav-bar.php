@@ -1,7 +1,7 @@
 
 <div id="NavB">
 <a class="styleNavBLink" href="login.php">Login</a>
-<a class="styleNavBLink" href="Signup.php">Signup</a>
+<a class="styleNavBLink" href="Home.php">Signup</a>
 <?php
 //!!!!!!!!!!!!!
 if($_SESSION["isUserLoggedIn"] == true){

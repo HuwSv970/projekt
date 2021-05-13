@@ -33,7 +33,7 @@ include_once("Nav-bar.php");
 ?>
 <?php
 if(isset($_POST["Name"],$_POST["Price"],$_POST["Count"])){
-    $sql = $connection->prepare("INSERT INTO Product  (PName, Price, ItemsNumber) VALUES (?,?,?)");
+    $sql = $connection->prepare("INSERT INTO Products  (PName, Price, ItemsNumber) VALUES (?,?,?)");
     if(!$sql){
         die("Error in your sql");
     }

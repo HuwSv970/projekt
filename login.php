@@ -77,7 +77,7 @@ if($_SESSION["isUserLoggedIn"]){
     </form>
     
 <?php
-    $sqlSelect = $connection->prepare("SELECT * from Product");
+    $sqlSelect = $connection->prepare("SELECT * from Products");
         $selectionWentOK = $sqlSelect->execute();
 
         if($selectionWentOK){
@@ -91,20 +91,26 @@ if($_SESSION["isUserLoggedIn"]){
         <th id="itemTable">Name of the Product</th>
         <th id="itemTable">Price</th> 
         <th id="itemTable">In stock</th>
+        
     </tr> 
                 <td id="itemTable"><?=$row["PName"]?></td>
                 <td id="itemTable"><?=$row["Price"]?>€</td>
                 <td id="itemTable"><?=$row["ItemsNumber"]?></td>
             </tr>
-                <?php
+            
+               
+                <input type="button" value="Deleat">
+                 <?php
+            
             }
+            
 
         } else {
             print "Something went wrong when selecting data";
         }
         ?>
         </table>
-    
+        
 
     <?php
 } else {
@@ -129,3 +135,4 @@ if($_SESSION["isUserLoggedIn"]){
 </div>
 </body>
 </html>
+
