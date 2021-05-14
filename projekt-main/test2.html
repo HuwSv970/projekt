@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My-Store</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+
+</head>
+
+<body>
+    </br>
+    <img id="left" src="1.jpg">
+    <img id="right" src="2.jpg">
+
+    <div id="content">
+
+        <div id="NavB">
+            <a class="styleNavBLink" href="login.php">Login</a>
+            <a class="styleNavBLink" href="Home.php">Signup</a>
+        </div>
+
+        <h1>Welcome to My-Store. You will signup here</h1>
+        <div class="container">
+            <form class="myRegistration" method="POST">
+                <div>
+                    <label for="FirstName">First Name:</label> <input name="FirstName">
+                </div>
+
+                <div><label for="LastName">Last Name:</label> <input name="LastName"></div>
+                <div><label for="UserName">Username:</label> <input name="UserName"></div>
+                <div><label for="Psw">Password:</label> <input name="Psw" type="password"></div>
+                <div><label for="Psw2">Re-type Password:</label> <input name="Psw2" type="password"></div>
+                <div><label for="Country">Choose your country:</label>
+                    <select name="Country">
+
+                        <option value="1">Luxembourg</option>
+                        <option value="1">Luxembourg</option>
+                        <option value="2">Germany</option>
+                        <option value="3">Belgium</option>
+
+                    </select>
+                </div>
+
+                <input type="submit" name="submit" value="Register" style="padding:11px">
+            </form>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

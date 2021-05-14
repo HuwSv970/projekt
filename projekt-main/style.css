@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(122, 241, 241);
+}
+.styleNavBLink{
+    background-color: black;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    padding:15px;
+    margin:2px;
+}
+#NavB{
+    text-align:center;
+
+}
+#content{
+    text-align:center;
+    height: 1300px;
+    width: 1000px;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: rgb(122, 241, 241);
+    
+}
+button {
+background-color:black;
+}
+table {
+    margin-left: 40%;
+}
+#left{
+    position: absolute;
+    height:1280px;
+    width:670px;
+    top: 11px;
+    left: 11px;
+    z-index: -1;
+    }
+#right{
+    position: absolute;
+    height:1280px;
+    width:670px;
+    top: 11px;
+    right: 11px;
+    z-index: -1;
+    
+    }
+#itemTable{
+    padding:10px;
+    font-size:20px;
+    border-collapse: collapse;
+}
+#tablelogin{
+  margin-left: auto; 
+  margin-right: auto;
+  border-bottom: 1px solid black;
+}
+
+.myRegistration{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    align-items: center;
+    padding-left: 250px;
+    padding-top: 2px;
+}
+
+.myRegistration div{
+    width:300px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3px;
+    
+}
+.myRegistration input{
+    width: 160px;
+    height: 40px;
+}
+.myRegistration option{
+    width: 120px;
+    height: 70px;
+}
+.container{
+text-align: right;
+}
