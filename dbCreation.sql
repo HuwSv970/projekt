@@ -19,7 +19,7 @@ CREATE TABLE PPL (
     ID_COUNTRY int not null,
     UserRole varchar(20),
     primary key (ID_PERSON),
-    foreign key (ID_COUNTRY) references Countries(ID_COUNTRY)
+    foreign key (ID_COUNTRY) references Countries(ID_COUNTRY) ON DELETE CASCADE
 );
 
 Create table Products (
@@ -33,15 +33,18 @@ Create table Products (
 Create table OrderTable (
     ID_ORDER int NOT NULL AUTO_INCREMENT,
     person_Order int(5),
+    order_Status varchar(20),
     primary key (ID_ORDER),
     foreign key (person_Order) references PPL(ID_PERSON)
  );
 Create table OrderContent(
     ID_ORDERCONTENT int NOT NULL AUTO_INCREMENT,
-    primary key (ID_OrderContent),
-    order_Number int(5),
-    order_Item int(5),
-    foreign key (order_Number) references OrderTable(ID_ORDER),
-    foreign key (order_Item) references Products(ID_Product)
+    primary key (ID_ORDERCONTENT),
+    orderNumber int(5),
+    orderItem int(5),
+    HowMany int(5),
+    foreign key (orderNumber) references OrderTable(ID_ORDER),
+    foreign key (orderItem) references Products(ID_Product)
 );
+
 Insert into Countries (CountryName) values ("Luxembourg");

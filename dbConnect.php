@@ -4,6 +4,10 @@ if(!isset($_SESSION["isUserLoggedIn"])){
     $_SESSION["isUserLoggedIn"] = false;
 }
 
+if(!isset($_SESSION["ShoppingCart"])){
+    $_SESSION["ShoppingCart"] = [];
+}
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -22,4 +26,3 @@ if (!$connection){
     //here all my PHP code running is STOPPED!
 }
 //echo "Connected successfully <BR>";
-?>

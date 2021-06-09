@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        .myRegistration{
+            display:flex;
+            flex-direction: column;
+            width:500px;
+            align-items: center;
+        }
+
+        .myRegistration div{
+            width:300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+    <script src='main.js'></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name of the Product</th>
+            <th>Price</th>            
+            <th>In stock</th>        
+        </tr>
+
+
+
+
+
+        <tr>
+            <td>Banana</td> 
+            <td>5€</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Apple</td> 
+            <td>5€</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Kiwi</td> 
+            <td>5€</td>
+            <td>5</td>
+        </tr>
+
+
+
+
+        
+    </table>
+
+
+    <form class="myRegistration" method="POST">
+        <div>
+        <label for="FirstName">First Name:</label>  <input name="FirstName"></div>
+
+        <div><label for="LastName">Last Name:</label>    <input name="LastName"></div>
+        <div><label for="UserName">Username:</label>     <input name="UserName"></div>
+        <div><label for="Psw">Password:</label>          <input name="Psw" type="password"></div>
+        <div><label for="Psw2">Re-type Password:</label> <input name="Psw2" type="password"></div>
+        <div><label for="Country">Choose your country:</label>
+        <select  name="Country">
+            <option value="1">Luxembourg</option>            
+        </select></div>
+
+        <input type="submit" name="submit" value="Register" style ="padding:11px">
+    </form>
+
+
+</body>
+</html>

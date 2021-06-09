@@ -1,0 +1,1 @@
+INSERT INTO PPL(FirstName, LastName, UserName, Psw, ID_COUNTRY,UserRole) VALUES("Sven","Huwer","HuSv01","$2y$10$AxWiMBLNNO23qFQPXNa.E.BcwyyJdhNArgvgq9tuorZPtcVwH9gty",1,"NormalUser");
